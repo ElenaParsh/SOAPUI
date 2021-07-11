@@ -1,0 +1,41 @@
+REQUEST:
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wrap="http://foo.bar/wrappersoapserver">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <wrap:doRegister>
+         <email>Test_soap@mail.com</email>
+         <name>Иван Иванов</name>
+         <password>1</password>
+      </wrap:doRegister>
+   </soapenv:Body>
+</soapenv:Envelope>
+RESPONSE:
+<SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://users.bugred.ru/tasks/soap/WrapperSoapServer.php" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">
+   <SOAP-ENV:Body>
+      <ns1:doRegisterResponse>
+         <return xsi:type="SOAP-ENC:Struct">
+            <email xsi:type="xsd:string">Test_soap@mail.com</email>
+            <name xsi:type="xsd:string">Иван Иванов</name>
+            <avatar xsi:type="xsd:string">http://users.bugred.ru//tmp/default_avatar.jpg</avatar>
+            <password xsi:type="xsd:string">4dff4ea340f0a823f15d3f4f01ab62eae0e5da579ccb851f8db9dfe84c58b2b37b89903a740e1ee172da793a6e79d560e5f7f9bd058a12a280433ed6fa46510a</password>
+            <birthday xsi:type="xsd:int">0</birthday>
+            <gender xsi:type="xsd:string"/>
+            <date_start xsi:type="xsd:int">0</date_start>
+            <hobby xsi:type="xsd:string"/>
+            <name1 xsi:type="xsd:string"/>
+            <surname1 xsi:type="xsd:string"/>
+            <fathername1 xsi:type="xsd:string"/>
+            <cat xsi:type="xsd:string"/>
+            <dog xsi:type="xsd:string"/>
+            <parrot xsi:type="xsd:string"/>
+            <cavy xsi:type="xsd:string"/>
+            <hamster xsi:type="xsd:string"/>
+            <squirrel xsi:type="xsd:string"/>
+            <phone xsi:type="xsd:string"/>
+            <adres xsi:type="xsd:string"/>
+            <inn xsi:type="xsd:string"/>
+         </return>
+      </ns1:doRegisterResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
